@@ -2,11 +2,11 @@
   "name": "examen2_cicd",
   "version": "1.0.0",
   "main": "index.js",
- "scripts": {
+"scripts": {
   "start": "node index.js",
- "lint": "eslint . || true",
-  "test": "jest",
-  "coverage": "jest --coverage"
+  "lint": "eslint . || true",
+  "test": "npx jest --ci",
+  "coverage": "npx jest --coverage --ci"
 },
   "keywords": [],
   "author": "",
