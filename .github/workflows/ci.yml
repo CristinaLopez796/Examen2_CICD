@@ -25,7 +25,7 @@ jobs:
           cache: npm
 
       - name: Instalar dependencias
-        run: npm install
+        run: npm ci
 
       - name: Ejecutar lint
         run: npm run lint
@@ -48,7 +48,7 @@ jobs:
           cache: npm
 
       - name: Instalar dependencias
-        run: npm install
+        run: npm ci
 
       - name: Ejecutar pruebas
         run: npm test
@@ -71,7 +71,7 @@ jobs:
           cache: npm
 
       - name: Instalar dependencias
-        run: npm install
+        run: npm ci
 
       - name: Ejecutar coverage
         run: npm run coverage

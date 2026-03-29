@@ -5,8 +5,8 @@
 "scripts": {
   "start": "node index.js",
   "lint": "eslint . || true",
-  "test": "npx jest --ci",
-  "coverage": "npx jest --coverage --ci"
+  "test": "jest --ci",
+  "coverage": "jest --coverage --ci"
 },
   "keywords": [],
   "author": "",
