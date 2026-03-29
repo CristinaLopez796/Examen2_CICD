@@ -10,8 +10,9 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [18, 20]
 
     steps:
       - name: Checkout del codigo
@@ -32,8 +33,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [18, 20]
 
     steps:
       - name: Checkout del codigo
@@ -54,8 +56,9 @@ jobs:
   coverage:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [18, 20]
 
     steps:
       - name: Checkout del codigo
