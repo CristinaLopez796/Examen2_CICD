@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: examen2_app
+    ports:
+      - "3001:3000"
+    depends_on:
+      - db
+    networks:
+      - examen2_network
+
+  db:
+    image: mysql:8.0
+    container_name: examen2_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: examen_db
+      MYSQL_USER: user_exam
+      MYSQL_PASSWORD: pass_exam
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - examen2_network
+
+volumes:
+  mysql_data:
+
+networks:
+  examen2_network:
