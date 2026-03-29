@@ -2,11 +2,18 @@
   "name": "examen2_cicd",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+ "scripts": {
+  "start": "node index.js",
+  "lint": "eslint .",
+  "test": "jest",
+  "coverage": "jest --coverage"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "eslint": "^10.1.0",
+    "jest": "^30.3.0"
+  }
 }
